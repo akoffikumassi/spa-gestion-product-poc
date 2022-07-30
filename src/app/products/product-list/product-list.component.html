@@ -1,0 +1,13 @@
+<ul class="products" *ngIf="products$ | async as products">
+  <li
+    *ngFor="let product of products"
+    [title]="product | json"
+    (click)="onSelect(product)"
+  >
+    <span class="name">{{ product.title | uppercase }}</span>
+    <span class="description">{{ product.description }}</span>
+    <span class="price">{{
+      product.price | currency: "CAD":"symbol-narrow":".2"
+    }}</span>
+  </li>
+</ul>
