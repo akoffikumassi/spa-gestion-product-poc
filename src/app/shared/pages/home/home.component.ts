@@ -1,16 +1,20 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
+  name = 'Welcome Home';
+  url: string = 'http://localhost:4200/product-detail/575';
+  urlSafe!: SafeResourceUrl;
 
-  constructor() { }
+  constructor(public sanitizer: DomSanitizer) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
   }
-
 }

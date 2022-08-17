@@ -1,0 +1,16 @@
+.iframe-product {
+  display: inline;
+  border: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  [highlight] {
+    background: green;
+    color: white;
+  }
+}
+
+.removeScoller {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
