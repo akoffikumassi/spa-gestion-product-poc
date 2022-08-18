@@ -9,6 +9,7 @@ const routes: Routes = [
     path: 'products',
     loadChildren: () =>
       import('./products/products.module').then((m) => m.ProductsModule),
+    data: { preload: true },
   },
   { path: '**', redirectTo: '/error?status=404' },
 ];
