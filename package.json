@@ -25,6 +25,7 @@
     "@angular/router": "^14.0.0",
     "@angular/service-worker": "^14.0.0",
     "@auth0/angular-jwt": "3.0.1",
+    "@ngtools/webpack": "^14.0.0",
     "rxjs": "~7.5.5",
     "stacktrace-js": "^2.0.2",
     "tslib": "^2.0.0",
