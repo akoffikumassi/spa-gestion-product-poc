@@ -4,21 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './shared/pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
-//import { MaterialModule } from './materials/materials.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const moduleImports = [
   BrowserModule,
   AppRoutingModule,
   HttpClientModule,
   SharedModule,
-  // MaterialModule,
 ];
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [...moduleImports],
+  imports: [...moduleImports, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
